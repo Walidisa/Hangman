@@ -1,0 +1,12 @@
+C:\Users\walid\Desktop\Mini Games\hangmanPics\empty.png
+C:\Users\walid\Desktop\Mini Games\hangmanPics\fullsize.png
+C:\Users\walid\Desktop\Mini Games\hangmanPics\head+body+allArms+rightLeg.png
+C:\Users\walid\Desktop\Mini Games\hangmanPics\head+body+allArms.png
+C:\Users\walid\Desktop\Mini Games\hangmanPics\head+body+rightarm.png
+C:\Users\walid\Desktop\Mini Games\hangmanPics\head+body.png
+C:\Users\walid\Desktop\Mini Games\hangmanPics\head.png
+C:\Users\walid\Desktop\Mini Games\Hangman.exe
+C:\Users\walid\Desktop\Mini Games\Hangman.dll
+C:\Users\walid\Desktop\Mini Games\Hangman.deps.json
+C:\Users\walid\Desktop\Mini Games\Hangman.runtimeconfig.json
+C:\Users\walid\Desktop\Mini Games\Hangman.pdb
