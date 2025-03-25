@@ -120,7 +120,7 @@
             Controls.Add(richTextBox1);
             Controls.Add(startButton);
             Controls.Add(hangmanPic);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "Form1";
             Text = "Hangman";
             Load += Form1_Load;

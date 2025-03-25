@@ -65,8 +65,7 @@ namespace Hangman
 
         }
         private void guessButton_Click(object sender, EventArgs e)
-        {
-           
+        {  
             Boolean check = false;
             int charIndex = 0;
             string u = "";
@@ -104,20 +103,6 @@ namespace Hangman
                         }
 
                     }
-                    //for (int i = 0; i < richTextBox1.Text.Length; i++)
-                    //{
-
-                    //else
-                    //    {
-                    //       win = false;
-                    //    }
-                    //}
-                    //if (count == word.Length)
-                    //{
-                    //    win = true;
-                    //    richTextBox1.Enabled = true;
-                    //    richTextBox1.BackColor = Color.Green;
-                    //}
                     richTextBox1.Text = text;
                      richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
                 }
@@ -162,7 +147,7 @@ namespace Hangman
                 MessageBox.Show("Enter a letter.");
             }
             if (!richTextBox1.Text.Contains('_'))
-                        {
+            {
                 win = true;
                 richTextBox1.Enabled = true;
                 richTextBox1.BackColor = Color.Green;
@@ -173,20 +158,7 @@ namespace Hangman
                 hangmanPic.Image = Image.FromFile(Path.Combine(basePath, "empty.png"));
                 lose = 0;
                 count = 0;
-                            //win = false;
-                        }
-            //if (win)
-            //{
-            //    MessageBox.Show("Congratulations! You have guessed the correct word and Saved the Hangman! \nPress Start to generate another word and start another game");
-
-            //    startButton.Enabled = true;
-            //    guessButton.Enabled = false;
-            //    inputText.Enabled = false;
-            //    hangmanPic.Image = Image.FromFile("C:/Users/walid/Downloads/empty.png");
-            //    lose = 0;
-            //    count = 0;
-            //    win = false;
-            //}
+            }
         }
     }
 }
