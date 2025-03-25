@@ -22,3 +22,4 @@ C:\Users\walid\source\repos\Hangman\Hangman\obj\Release\net8.0-windows\refint\Ha
 C:\Users\walid\source\repos\Hangman\Hangman\obj\Release\net8.0-windows\Hangman.pdb
 C:\Users\walid\source\repos\Hangman\Hangman\obj\Release\net8.0-windows\Hangman.genruntimeconfig.cache
 C:\Users\walid\source\repos\Hangman\Hangman\obj\Release\net8.0-windows\ref\Hangman.dll
+C:\Users\walid\source\repos\Hangman\Hangman\obj\Release\net8.0-windows\Hangman.sourcelink.json

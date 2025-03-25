@@ -12,7 +12,6 @@ namespace Hangman
             "dog",
             "car",  
             "bus",
-            "bike",
             "cherry",
             "house",
             "elephant",
@@ -54,6 +53,7 @@ namespace Hangman
             inputText.Enabled = true;
             richTextBox1.BackColor = Color.White;
             richTextBox1.Enabled = false;
+            hangmanPic.Image = Image.FromFile(Path.Combine(basePath, "empty.png"));
             richTextBox1.Text = "";
             for (int i = 0; i < word.Length; i++)
             {
@@ -69,6 +69,7 @@ namespace Hangman
            
             Boolean check = false;
             int charIndex = 0;
+            string u = "";
             if (inputText.Text.Length > 0)
             {
                char a = inputText.Text[0];
@@ -89,6 +90,7 @@ namespace Hangman
                         {
                             if (word[i/2] == a)
                             {
+                                u += a;
                                 text += a + " ";
                                 richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
                             }
@@ -102,24 +104,21 @@ namespace Hangman
                         }
 
                     }
-                    for (int i = 0; i < richTextBox1.Text.Length; i++)
-                    {
-                        if (richTextBox1.Text[i] == '_' || richTextBox1.Text[i] == ' ')
-                        {
-                            win = false;
-                        }
-                        else
-                        {
-                            count++;
-                        }
-                    }
-                    if (count == word.Length)
-                    {
-                        win = true;
-                        richTextBox1.Enabled = true;
-                        richTextBox1.BackColor = Color.Green;
-                    }
-                     richTextBox1.Text = text;
+                    //for (int i = 0; i < richTextBox1.Text.Length; i++)
+                    //{
+
+                    //else
+                    //    {
+                    //       win = false;
+                    //    }
+                    //}
+                    //if (count == word.Length)
+                    //{
+                    //    win = true;
+                    //    richTextBox1.Enabled = true;
+                    //    richTextBox1.BackColor = Color.Green;
+                    //}
+                    richTextBox1.Text = text;
                      richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
                 }
                 else
@@ -148,7 +147,6 @@ namespace Hangman
                             richTextBox1.Enabled = true;
                             richTextBox1.BackColor = Color.Red;
                             MessageBox.Show("Oops the Hangman has Died! You couldn't Guess the Correct Word! \nPress Start to start another game");
-                            hangmanPic.Image = Image.FromFile(Path.Combine(basePath, "empty.png"));
                             startButton.Enabled = true;
                             guessButton.Enabled = false;
                             inputText.Enabled = false;
@@ -163,18 +161,32 @@ namespace Hangman
             {
                 MessageBox.Show("Enter a letter.");
             }
-            if (win)
-            {
+            if (!richTextBox1.Text.Contains('_'))
+                        {
+                win = true;
+                richTextBox1.Enabled = true;
+                richTextBox1.BackColor = Color.Green;
                 MessageBox.Show("Congratulations! You have guessed the correct word and Saved the Hangman! \nPress Start to generate another word and start another game");
-
                 startButton.Enabled = true;
                 guessButton.Enabled = false;
                 inputText.Enabled = false;
-                hangmanPic.Image = Image.FromFile("C:/Users/walid/Downloads/empty.png");
+                hangmanPic.Image = Image.FromFile(Path.Combine(basePath, "empty.png"));
                 lose = 0;
                 count = 0;
-                win = false;
-            }
+                            //win = false;
+                        }
+            //if (win)
+            //{
+            //    MessageBox.Show("Congratulations! You have guessed the correct word and Saved the Hangman! \nPress Start to generate another word and start another game");
+
+            //    startButton.Enabled = true;
+            //    guessButton.Enabled = false;
+            //    inputText.Enabled = false;
+            //    hangmanPic.Image = Image.FromFile("C:/Users/walid/Downloads/empty.png");
+            //    lose = 0;
+            //    count = 0;
+            //    win = false;
+            //}
         }
     }
 }

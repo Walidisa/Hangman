@@ -86,6 +86,7 @@
             // guessButton
             // 
             guessButton.BackColor = Color.SkyBlue;
+            guessButton.Enabled = false;
             guessButton.Font = new Font("Segoe UI", 16F);
             guessButton.Location = new Point(614, 12);
             guessButton.Name = "guessButton";
